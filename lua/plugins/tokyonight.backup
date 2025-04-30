@@ -1,0 +1,14 @@
+return {
+  {
+    "folke/tokyonight.nvim",
+    priority = 1000, -- Assicura che venga caricato prima di altri temi
+    lazy = true, -- Forza il caricamento all'avvio
+    opts = {
+      style = "storm", -- Opzioni: "storm", "night", "moon", "day"
+      transparent = true, -- Imposta lo sfondo trasparente
+    },
+    config = function()
+      vim.cmd.colorscheme("tokyonight") -- Applica il tema
+    end,
+  },
+}

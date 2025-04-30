@@ -1,0 +1,20 @@
+return {
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 0, -- 🔥 Assicura che venga caricato prima degli altri temi
+    lazy = false, -- 🔥 Carica immediatamente il tema all'avvio
+    config = function()
+      require("catppuccin").setup({
+        flavour = "mocha", -- Opzioni: latte, frappe, macchiato, mocha
+        integrations = {
+          treesitter = true,
+          telescope = true,
+          notify = true,
+          mini = true,
+        },
+      })
+      vim.cmd.colorscheme("catppuccin")
+    end,
+  },
+}
